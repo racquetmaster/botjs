@@ -1,0 +1,22 @@
+{
+  "name": "botjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/racquetmaster/botjs.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/racquetmaster/botjs/issues"
+  },
+  "homepage": "https://github.com/racquetmaster/botjs#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
