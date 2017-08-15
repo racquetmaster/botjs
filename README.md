@@ -1,11 +1,14 @@
 # botjs
 
-## Install Node (bash)
-```
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
 
-## Install Atom (Windows)
-Goto: `https://atom.io/`
-Download and install.
+## Environment (Windows)
+1. Install node
+2. Install atom
+
+    Goto: `https://atom.io/`
+    Download and install.
+
+3. Install git
+
+## References
+* [nircmd](http://www.nirsoft.net/utils/nircmd.html) - Used for mouse movement
