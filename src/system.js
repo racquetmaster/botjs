@@ -4,24 +4,28 @@ const cp = require('child_process');
 const path = require('path');
 
 class Windows {
-    constructor(){
-        this.nircmd_path = path.join(__dirname, 'bin', 'nircmd', 'nircmd.exe');
+    constructor() {
+        this.nircmd_path = path.join(__dirname, '..', 'bin', 'nircmd', 'nircmd.exe');
     }
 
-    _cmd(args){
+    _cmd(args) {
         cp.execSync(`${this.nircmd_path} ${args}`);
     }
 
-    screenshot(file){
+    screenshot(file) {
         this._cmd(`savescreenshot ${file}`);
     }
 
-    click(x, y){
+    click(x, y) {
         this._cmd(`setcursor ${x} ${y}`);
         this._cmd(`sendmouse left click`);
     }
 
-    wait(time){
+    setcursor(x, y) {
+        this._cmd(`setcursor ${x} ${y}`);
+    }
+
+    wait(time) {
         this._cmd(`wait ${time}`);
     }
 }

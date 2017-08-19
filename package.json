@@ -2,9 +2,10 @@
   "name": "botjs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/racquetmaster/botjs#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "electron": "1.7.5"
   }
 }
