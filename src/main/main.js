@@ -1,5 +1,6 @@
 'use strict';
-const { app, BrowserWindow, Menu } = require('electron')
+const electron = require('electron');
+const { app, BrowserWindow, Menu } = electron;
 const url = require('url');
 const path = require('path');
 
@@ -10,9 +11,16 @@ if (!page) {
 }
 
 function create_win() {
-    let win = new BrowserWindow({ width: 800, height: 600 });
+    let { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
+    let win = new BrowserWindow({ width, height });
 
-    Menu.setApplicationMenu(null);
+    let menu_template = [{
+        label: 'Window',
+        submenu: [
+            { role: 'toggledevtools' },
+        ]
+    }];
+    Menu.setApplicationMenu(Menu.buildFromTemplate(menu_template));
 
     let u = url.format({
         pathname: path.join(__dirname, '..', 'pages', `${page}.html`),

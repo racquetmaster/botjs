@@ -6,3 +6,14 @@ table, td, th, tr {
 td, th {
     padding: 2px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
